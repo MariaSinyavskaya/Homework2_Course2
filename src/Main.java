@@ -1,8 +1,6 @@
 public class Main {
     public static void main(String[] args) {
 
-        StudentService studentService = new StudentService();
-
         Gryffindor harryPotter = new Gryffindor("Гарри Поттер", 80, 78, 95, 100, 98);
         Gryffindor hermioneGranger = new Gryffindor("Гермиона Грейнджер", 90, 85, 73, 60, 69);
         Gryffindor ronWeasley = new Gryffindor("Рон Уизли", 60, 50, 80, 90, 95);
@@ -19,20 +17,20 @@ public class Main {
         Ravenclaw padmaPatil = new Ravenclaw("Падма Патил", 66, 48, 98, 56, 42, 24);
         Ravenclaw marcusBelby = new Ravenclaw("Маркус Белби", 79, 55, 40, 47, 55, 70);
 
-        studentService.printGryffindorStudent(ronWeasley);
-        studentService.printHufflepuffStudent(justinFinchFletchley);
-        studentService.printRavenclawStudent(padmaPatil);
-        studentService.printSlytherinStudent(dracoMalfoy);
+        Gryffindor.printGryffindorStudent(ronWeasley);
+        Hufflepuff.printHufflepuffStudent(justinFinchFletchley);
+        Ravenclaw.printRavenclawStudent(padmaPatil);
+        Slytherin.printSlytherinStudent(dracoMalfoy);
         System.out.println();
 
-        studentService.compareHufflepuffStudents(zachariahSmith, cedricDiggory);
-        studentService.compareGryffindorStudents(hermioneGranger, harryPotter);
-        studentService.compareRavenclawStudents(padmaPatil, marcusBelby);
-        studentService.compareSlytherinStudents(grahamMontague, gregoryGoyle);
+        Hufflepuff.compareHufflepuffStudents(zachariahSmith, cedricDiggory);
+        Gryffindor.compareGryffindorStudents(hermioneGranger, harryPotter);
+        Ravenclaw.compareRavenclawStudents(padmaPatil, marcusBelby);
+        Slytherin.compareSlytherinStudents(grahamMontague, gregoryGoyle);
         System.out.println();
 
-        studentService.compareAnyTwoStudents(harryPotter, dracoMalfoy);
-        studentService.compareAnyTwoStudents(zhouChang, cedricDiggory);
+        Hogwarts.compareAnyTwoStudents(harryPotter, dracoMalfoy);
+        Hogwarts.compareAnyTwoStudents(zhouChang, cedricDiggory);
 
 
     }
